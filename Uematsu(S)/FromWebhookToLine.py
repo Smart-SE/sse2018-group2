@@ -12,4 +12,4 @@ def LineNotify(time, valueA, valueB):
 	requests.post(IFTTT_FROM_WEBHOOK_TO_LINE + IFTTT_KEY, json = {"value1":time, "value2":valueA, "value3":valueB})
 
 while 1:
-	LineNotify(datetime.now().strftime("%Y/%m/%d %H:%M:%S"),'testA','testB')
+	LineNotify(datetime.now().strftime("%Y/%m/%d %H:%M:%S"),'SensorID','‰·‚­‚È‚Á‚Ä‚¢‚Ü‚·')
