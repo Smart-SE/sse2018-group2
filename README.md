@@ -1,11 +1,8 @@
 # sse2018-group2
 
-## 作業
-- o マスターデバイス決定...Raspberry pi3
-- o センサ決定...DS18B20
-- o データ取得...タイムスタンプ,センサID,温度
--   データ判定...
--   タブレット通知...
--   (オプション)残量検知...
--   発表資料作成...
-  
+This is the group 2 repository on the Smart IoT System & Service Prototyping Curriculum in the Smart SE program 2018.
+We are learning agile, lean development and DevOps then practicing prototyping based on it.
+
+※Smart SE : Smart Systems and Services innovative professional Education program
+
+Development is ongoing. Please wait for a while until the presentation.
