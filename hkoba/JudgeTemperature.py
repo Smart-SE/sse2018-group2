@@ -1,6 +1,5 @@
 #-*- coding: utf-8 -*-
 import pandas as pd
-import time
 
 dateparse = lambda x: pd.datetime.strptime(x, '%Y/%m/%d %H:%M:%S')
 df = pd.read_csv('test.csv', header=None, names=['datetime', 'deviceID', 'temperature'], parse_dates=['datetime'], date_parser=dateparse)
