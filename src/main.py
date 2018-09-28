@@ -1,19 +1,19 @@
-import TemperatureModule
-import FileModule
+import Temperature.TemperatureModule as TM
+import util.FileModule as FM
 from datetime import datetime
 import time
 
 sensorID = '28-000f98432706'
 fileName = 'test.csv'
 
-FileModule.Clear(fileName)
+FM.Clear(fileName)
 
 while 1:
-	temperature = TemperatureModule.Get(sensorID)
+	temperature = TM.Get(sensorID)
 	timeStump = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 	output = timeStump + ',' + sensorID + ',' + str(temperature)
-	FileModule.AddRow(fileName, output.split(','))
+	FM.AddRow(fileName, output.split(','))
 	print output.split(',')
 
-	#time.sleep(4)
+	time.sleep(4)
 
