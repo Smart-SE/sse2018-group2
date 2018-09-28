@@ -1,0 +1,40 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://obniz.io/js/jquery-3.2.1.min.js"></script>
+  <script src="https://unpkg.com/obniz@1.11.2/obniz.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="obniz-debug"></div>
+<h1>obniz instant LM35DZ output html</h1>
+<div id="print"></div>
+<p>
+  <textarea id="temp" class="ui-input-text ui-shadow-inset ui-body-inherit ui-corner-all ui-textinput-autogrow" style="height: 52px;"></textarea>
+</p>
+
+<script>
+var obniz = new Obniz("XXXX-XXXX");
+obniz.onconnect = async function () {
+  document.getElementById("temp").style.height = "220px";              // テキストエリア高さ調整
+  var tempsens = obniz.wired("LM35DZ",  { gnd:9 , output:10, vcc:11}); // LM35DZ(温度センサ)インスタンス
+  var count  = 0; // カウンタ
+  var temp50 = 0; // 平均温度取得用
+  tempsens.onchange = function(temp) {                 // 温度変化イベント    
+    const tlen = $("#temp").text().split('\n').length; // テキストエリアの行数 tlen = $("#text").val().split('\n').length;
+    if (tlen > 10) $("#temp").text("");                // 10行を超えたら textarea クリア
+    count += 1;
+    temp50 += parseFloat(temp); //temp50 += parseInt(temp);
+    if (count == 50) {
+      temp50 = temp50 / count;                                         // 平均温度
+      $("#temp").text($("#temp").val() + parseInt(temp50) + "℃\r\n"); // 表示
+      count  = 0;
+      temp50 = 0;
+    } // if
+  }; // tempsens.onchange
+}
+
+</script>
+</body>
+</html>
