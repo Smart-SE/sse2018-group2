@@ -2,42 +2,30 @@
 import sqlite3
 import datetime
 
-deviceID = '28-000f98432706'
+def Insert(TIME, DEVICE, TEMP, STATUS):
 
-while True:
+    #print("Last valid input: " + TIME)
+    #print("Temperature: %f C" % TEMP)
+    #print("DeviceID: " + DEVICE)
+    #print("Status: %d" % STATUS)
 
-    if True:
-        TIME = str(datetime.datetime.now())
-        TEMP = 20.3
-        DEVICE = str(deviceID)
-        STATUS = 1 #1:Nurui
+    dbname = '/home/pi/temp.db'
 
-        print("Last valid input: " + TIME)
-        print("Temperature: %f C" % TEMP)
-        print("DeviceID: " + DEVICE)
-        print("Status: %d" % STATUS)
-        break;
+    dbtable = 't_temp'
 
-dbname = '/home/pi/temp.db'
+    conn = sqlite3.connect(dbname)
+    c = conn.cursor()
 
-dbtable = 't_temp'
+    checkdb = conn.execute("SELECT * FROM sqlite_master WHERE type='table' and name='%s'" % dbtable)
 
-conn = sqlite3.connect(dbname)
-c = conn.cursor()
+    if checkdb.fetchone() == None:
+        create_table = '''create table ''' + dbtable + '''(id integer primary key autoincrement, timestamp varchar(20) not null, device text not null, temp real not null, status integer not null)'''
+        c.execute(create_table)
+        conn.commit()
 
-checkdb = conn.execute("SELECT * FROM sqlite_master WHERE type='table' and name='%s'" % dbtable)
-
-if checkdb.fetchone() == None:
-
-    create_table = '''create table ''' + dbtable + '''(id integer primary key autoincrement, timestamp varchar(20) not null, device text not null, temp real not null, status integer not null)'''
-
-    c.execute(create_table)
-
+    sql = 'insert into t_temp (timestamp, device, temp, status) values (?,?,?,?)'
+    data = (TIME, DEVICE, TEMP, STATUS)
+    c.execute(sql, data)
     conn.commit()
 
-sql = 'insert into t_temp (timestamp, device, temp, status) values (?,?,?,?)'
-data= (TIME, DEVICE, TEMP, STATUS)
-c.execute(sql, data)
-conn.commit()
-
-conn.close()
+    conn.close()
