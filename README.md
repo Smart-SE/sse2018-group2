@@ -36,27 +36,21 @@ Python Library
 ### Usage
 Python Library Install
 
+```
 sudo pip install -U pip
 
 sudo pip install -U setuptools
 
-
-- Pandas
-
 「sudo apt-get install python3-pandas」or「sudo apt-get install python-pandas」
 
-- bottle
-
 sudo pip install bottle
-
-- bottle-websocket
 
 sudo pip install greenlet
 
 sudo pip install gevent
 
 sudo pip install bottle-websocket
-
+```
 
 ### Contributors
 @sse01-10
