@@ -5,7 +5,9 @@ We are learning agile, lean development and DevOps then practicing prototyping b
 
 ※Smart SE : Smart Systems and Services innovative professional Education program
 
-Development is ongoing. Please wait for a while until the presentation.
+~Development is ongoing. Please wait for a while until the presentation.~
+
+Development settled down! Please enjoy the demonstration.
 
 ## 「ヒヤクル」
 We assumed the user request and conceived the Electronically Controlled Monitoring System for Beer. 
