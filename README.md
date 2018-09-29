@@ -7,7 +7,7 @@ We are learning agile, lean development and DevOps then practicing prototyping b
 
 Development is ongoing. Please wait for a while until the presentation.
 
-## 「」
+## 「ヒヤクル」
 We assumed the user request and conceived the Electronically Controlled Monitoring System for Beer. 
 
 ### User Story
@@ -16,16 +16,46 @@ https://github.com/Smart-SE/sse2018-group2/labels/US
 
 ### Hardware requirements
 single-board-computer(runs operating system distributions based on Linux), For example Raspberry Pi.
+
 DS18B20(thermometer)
+
 SmartPhone or Tablet Device(line is installed)
 
 ### Setup
 
 
 ### Software requirements(Dependencies)
+Python Library
 
+- Pandas
+
+- bottle
+
+- bottle-websocket
 
 ### Usage
+Python Library Install
+
+sudo pip install -U pip
+
+sudo pip install -U setuptools
+
+
+- Pandas
+
+「sudo apt-get install python3-pandas」or「sudo apt-get install python-pandas」
+
+- bottle
+
+sudo pip install bottle
+
+- bottle-websocket
+
+sudo pip install greenlet
+
+sudo pip install gevent
+
+sudo pip install bottle-websocket
 
 
 ### Contributors
