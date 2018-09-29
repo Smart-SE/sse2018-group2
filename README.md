@@ -10,9 +10,10 @@ Development is ongoing. Please wait for a while until the presentation.
 ## 「ヒヤクル」
 We assumed the user request and conceived the Electronically Controlled Monitoring System for Beer. 
 
+![default](https://user-images.githubusercontent.com/36760280/46239890-5455dc00-c3da-11e8-9462-6c8cef31f591.JPG)
+
 ### User Story
 https://github.com/Smart-SE/sse2018-group2/labels/US
-
 
 ### Hardware requirements
 single-board-computer(runs operating system distributions based on Linux), For example Raspberry Pi.
