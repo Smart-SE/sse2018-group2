@@ -35,7 +35,7 @@ Python Library
 - bottle-websocket
 
 ### Usage
-Python Library Install
+1.Python Library Install in SBC
 
 ```
 sudo pip install -U pip
@@ -51,6 +51,20 @@ sudo pip install greenlet
 sudo pip install gevent
 
 sudo pip install bottle-websocket
+```
+
+2.Download Source code
+
+You can check the latest sources with the command:
+
+```
+git clone https://github.com/Smart-SE/sse2018-group2.git
+```
+
+3.Start
+
+```
+python main.py
 ```
 
 ### Contributors
