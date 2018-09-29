@@ -15,7 +15,9 @@ https://github.com/Smart-SE/sse2018-group2/labels/US
 
 
 ### Hardware requirements
-
+single-board-computer(runs operating system distributions based on Linux), For example Raspberry Pi.
+DS18B20(thermometer)
+SmartPhone or Tablet Device(line is installed)
 
 ### Setup
 
