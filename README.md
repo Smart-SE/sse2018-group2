@@ -34,8 +34,8 @@ Python Library
 
 - bottle-websocket
 
-### Usage
-1.Python Library Install in SBC
+### Usage on SBC
+1.Python Library Install
 
 ```
 sudo pip install -U pip
